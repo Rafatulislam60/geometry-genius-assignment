@@ -28,32 +28,30 @@
                   <img src="images/triangle.png" alt="triangle" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Triangle</h2>
+                  <h2 id="first-name" class="card-title">Triangle</h2>
                   <p>Area (A) = 0.5 x b x h</p>
                   <div class="flex flex-d-row space-x-3.5" >
-                    <input class="w-20 bg-gray-300 px-3"  placeholder="b"> <span class="space-x-2 text-base">cm</span>
-                  <input class="w-20 bg-gray-300 px-3"   placeholder="h"> <span class="space-x-2 text-base">cm</span>
+                    <input id="first-input" class="w-20 bg-gray-300 px-3"  placeholder="b"> <span class="space-x-2 text-base">cm</span>
+                  <input id="second-input" class="w-20 bg-gray-300 px-3"   placeholder="h"> <span class="space-x-2 text-base">cm</span>
                   </div>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Calculate</button>
+                    <button id="first-card" class="btn btn-wide btn-primary">Calculate</button>
                   </div>
                 </div>
-
-
             </div>
             <div class="card w-full bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
                   <img src="images/rectangle.png" alt="triangle" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Rectangle</h2>
+                  <h2 id="second-name" class="card-title">Rectangle</h2>
                   <p>Area (A) = w x l</p>
                   <div class="flex flex-d-row space-x-3.5" >
-                    <input class="w-20 bg-gray-300 px-3" placeholder="w"> <span class="space-x-2 text-base">cm</span>
-                  <input class="w-20 bg-gray-300 px-3" placeholder="l"> <span class="space-x-2 text-base">cm</span>
+                    <input id="input-second-card-1" class="w-20 bg-gray-300 px-3" placeholder="w"> <span class="space-x-2 text-base">cm</span>
+                  <input id="input-second-card-2" class="w-20 bg-gray-300 px-3" placeholder="l"> <span class="space-x-2 text-base">cm</span>
                   </div>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Calculate</button>
+                    <button id="second-card" class="btn btn-wide btn-primary">Calculate</button>
                   </div>
                 </div>
             </div>
@@ -62,26 +60,24 @@
                   <img src="images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Triangle</h2>
-                  <p>Area (A) = 0.5 x b x h</p>
-                  <p>b=10cm, h=12cm</p>
+                  <h2 id="third-name" class="card-title">Parallelogram</h2>
+                  <p>Area (A) = b x h</p>
+                  <p>b=<span id="wide-side">10</span>cm, h=<span id="height-side">12</span>cm</p>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Calculate</button>
+                    <button id="third-card" class="btn btn-wide btn-primary">Calculate</button>
                   </div>
                 </div>
-
-                
             </div>
             <div class="card w-full bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
                   <img src="images/rhombus.png" alt="rhombus" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Triangle</h2>
+                  <h2 id="fourth-name" class="card-title">Rhombus</h2>
                   <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                  <p>d<sub>1</sub> = 16cm,    d<sub>2</sub> = 8cm</p>
+                  <p>d<sub>1</sub> = <span id="first-side">16</span>cm,    d<sub>2</sub> = <span id="second-side">8</span>cm</p>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Calculate</button>
+                    <button id="fourth-card" class="btn btn-wide btn-primary">Calculate</button>
                   </div>
                 </div>
 
@@ -92,11 +88,11 @@
                   <img src="images/pentagon.png" alt="pentagon" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Triangle</h2>
+                  <h2 id="fifth-name" class="card-title">Pentagon</h2>
                   <p>Area (A) = 0.5 x p x b</p>
-                  <p>p = 6cm, b = 10cm</p>
+                  <p>p = <span id="first-value">6</span>cm, b = <span id="second-value">10</span>cm</p>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Calculate</button>
+                    <button id="fifth-card" class="btn btn-wide btn-primary">Calculate</button>
                   </div>
                 </div>
                 
@@ -106,11 +102,11 @@
                   <img src="images/ellipse.png" alt="ellipse" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Triangle</h2>
+                  <h2 id="sixth-name" class="card-title">Ellipse</h2>
                   <p>Area (A) = πab</p>
-                  <p>a = 10cm, b = 4cm</p>
+                  <p>a = <span id="valueOfOne">10</span>cm, b = <span id="valueOfTwo">4</span>cm</p>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Calculate</button>
+                    <button id="sixth-card" class="btn btn-wide btn-primary">Calculate</button>
                   </div>
                 </div>
                 
@@ -118,6 +114,13 @@
         </div>
         <div class="calculation-details w-full md:w-[30%] lg:w-[30%] mx-auto">
           <h1 class="text-xl text-center font-semibold underline">Area Calculation</h1>
+          <div class="overdflow-x-auto">
+            <table class="table w-full">
+              <tbody id="table-container">
+
+              </tbody>
+            </table>
+          </div>
         </div>
     </section>
     <script src="js/index.js"></script>
