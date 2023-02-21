@@ -21,8 +21,105 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="lg:px-10 flex flex-col md:flex-row lg:flex-row">
+        <div class="geometry-certails w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+            <div class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/triangle.png" alt="triangle" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 x b x h</p>
+                  <div class="flex flex-d-row space-x-3.5" >
+                    <input class="w-20 bg-gray-300 px-3"  placeholder="b"> <span class="space-x-2 text-base">cm</span>
+                  <input class="w-20 bg-gray-300 px-3"   placeholder="h"> <span class="space-x-2 text-base">cm</span>
+                  </div>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Calculate</button>
+                  </div>
+                </div>
 
+
+            </div>
+            <div class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/rectangle.png" alt="triangle" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Rectangle</h2>
+                  <p>Area (A) = w x l</p>
+                  <div class="flex flex-d-row space-x-3.5" >
+                    <input class="w-20 bg-gray-300 px-3" placeholder="w"> <span class="space-x-2 text-base">cm</span>
+                  <input class="w-20 bg-gray-300 px-3" placeholder="l"> <span class="space-x-2 text-base">cm</span>
+                  </div>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Calculate</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 x b x h</p>
+                  <p>b=10cm, h=12cm</p>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Calculate</button>
+                  </div>
+                </div>
+
+                
+            </div>
+            <div class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/rhombus.png" alt="rhombus" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                  <p>d<sub>1</sub> = 16cm,    d<sub>2</sub> = 8cm</p>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Calculate</button>
+                  </div>
+                </div>
+
+                
+            </div>
+            <div class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/pentagon.png" alt="pentagon" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 x p x b</p>
+                  <p>p = 6cm, b = 10cm</p>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Calculate</button>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/ellipse.png" alt="ellipse" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = πab</p>
+                  <p>a = 10cm, b = 4cm</p>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Calculate</button>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="calculation-details w-full md:w-[30%] lg:w-[30%] mx-auto">
+          <h1 class="text-xl text-center font-semibold underline">Area Calculation</h1>
+        </div>
     </section>
+    <script src="js/index.js"></script>
 </body>
 </html>
