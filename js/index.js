@@ -54,14 +54,11 @@ document.getElementById('second-card').addEventListener('click', function(){
 // third-card
 document.getElementById('third-card').addEventListener('click', function(){
     serial +=1;
-    const cardName = document.getElementById('third-name').innerText;
-    const wideValue = document.getElementById('wide-side').innerText;
-    const heightValue = document.getElementById('height-side').innerText;
-    // console.log(cardName, wideValue, heightValue);
 
-        const areaTotal = parseInt(wideValue) * parseInt(heightValue);
+        const cd = getData('third-name', 'wide-side', 'height-side');
+        const areaTotal = parseInt(cd.wideValue) * parseInt(cd.heightValue);
     
-        displayData(cardName, wideValue, heightValue, areaTotal);
+        displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
 
 // fourth-card
@@ -104,6 +101,20 @@ document.getElementById('sixth-card').addEventListener('click', function(){
 
 
 // common function to display data
+function getData(id1, id2, id3){
+    const cardName = document.getElementById(id1).innerText;
+    const wideValue = document.getElementById(id2).innerText;
+    const heightValue = document.getElementById(id3).innerText;
+
+    const cd = {
+        cardName: cardName,
+        wideValue: wideValue,
+        heightValue: heightValue,
+    };
+    return cd;
+}
+
+
 function displayData(nameOfC, valueOfW, valueOfH, resultC){
     const container = document.getElementById('table-container');
 
