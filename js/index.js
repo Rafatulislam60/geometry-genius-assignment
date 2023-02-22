@@ -64,38 +64,32 @@ document.getElementById('third-card').addEventListener('click', function(){
 // fourth-card
 document.getElementById('fourth-card').addEventListener('click', function(e){
     serial +=1;
-    const cardName = document.getElementById('fourth-name').innerText;
-    const wideValue = document.getElementById('first-side').innerText;
-    const heightValue = document.getElementById('second-side').innerText;
 
-    const areaTotal = 0.5 * parseInt(wideValue) * parseInt(heightValue);
+    const cd = getData('fourth-name', 'first-side', 'second-side');
+    const areaTotal = 0.5 * parseInt(cd.wideValue) * parseInt(cd.heightValue);
     
-        displayData(cardName, wideValue, heightValue, areaTotal);
+    displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
 
 // fifth-card
 document.getElementById('fifth-card').addEventListener('click', function(e){
     serial +=1;
-    const cardName = document.getElementById('fifth-name').innerText;
-    const wideValue = document.getElementById('first-value').innerText;
-    const heightValue = document.getElementById('second-value').innerText;
+    const cd = getData('fifth-name', 'first-value', 'second-value');
 
-    const areaTotal = 0.5 * parseInt(wideValue) * parseInt(heightValue);
+    const areaTotal = 0.5 * parseInt(cd.wideValue) * parseInt(cd.heightValue);
     
-        displayData(cardName, wideValue, heightValue, areaTotal);
+    displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
 
 // sixth-card
 document.getElementById('sixth-card').addEventListener('click', function(){
     serial +=1;
-    const cardName = document.getElementById('sixth-name').innerText;
-    const wideValue = document.getElementById('valueOfOne').innerText;
-    const heightValue = document.getElementById('valueOfTwo').innerText;
+    const cd = getData('sixth-name', 'valueOfOne', 'valueOfTwo');
 
-        const total = 3.14 * wideValue * heightValue;
+        const total = 3.14 * parseInt(cd.wideValue) * parseInt(cd.heightValue);
     const areaTotal = parseInt(total).toFixed(2);
     
-        displayData(cardName, wideValue, heightValue, areaTotal);
+    displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
 
 
