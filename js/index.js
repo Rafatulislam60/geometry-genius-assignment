@@ -11,6 +11,17 @@ document.getElementById('first-card').addEventListener('click', function(){
     const wideValue = document.getElementById('first-input').value;
     const heightValue = document.getElementById('second-input').value
     
+    if (
+        wideValue == "" ||
+        heightValue == "" ||
+        wideValue <= 0 ||
+        heightValue <= 0 ||
+        wideValue != "number" ||
+        heightValue != "number"
+    ) {
+        return alert("please enter any valid number");
+    }
+
     const areaTotal = 0.5 * parseInt(wideValue) * parseInt(heightValue);
     
     displayData(cardName, wideValue, heightValue, areaTotal);
@@ -23,6 +34,17 @@ document.getElementById('second-card').addEventListener('click', function(){
 
     const wideValue = document.getElementById('input-second-card-1').value;
     const heightValue = document.getElementById('input-second-card-2').value
+
+    if (
+        wideValue == "" ||
+        heightValue == "" ||
+        wideValue <= 0 ||
+        heightValue <= 0 ||
+        wideValue != "number" ||
+        heightValue != "number"
+    ) {
+        return alert("please enter any valid number");
+    }
     
     const areaTotal = parseInt(wideValue) * parseInt(heightValue);
     
@@ -90,6 +112,9 @@ function displayData(nameOfC, valueOfW, valueOfH, resultC){
     <td>${serial}</td>
     <td>${nameOfC}</td>
     <td>${resultC}</td>
+    <td>
+    <button class="btn btn-sm btn-primary">Covert to m<sup>2</sup></button>
+    </td>
     
     `;
     container.appendChild(tr);
