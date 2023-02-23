@@ -23,9 +23,7 @@ document.getElementById('first-card').addEventListener('click', function(){
         wideValue == "" ||
         heightValue == "" ||
         wideValue <= 0 ||
-        heightValue <= 0 ||
-        wideValue !== "number"||
-        heightValue !== "number"
+        heightValue <= 0
     ) {
         return alert("please enter any valid number");
     }
@@ -47,9 +45,7 @@ document.getElementById('second-card').addEventListener('click', function(){
         wideValue == "" ||
         heightValue == "" ||
         wideValue <= 0 ||
-        heightValue <= 0 ||
-        wideValue !== "number"||
-        heightValue !== "number"
+        heightValue <= 0
     ) {
         return alert("please enter any valid number");
     }
