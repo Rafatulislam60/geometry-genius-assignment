@@ -1,6 +1,14 @@
-// document.getElementById('first-card').addEventListener('click', function(){
-    
-// })
+// mouseover random color
+let cards = document.querySelectorAll("#card");
+
+cards.forEach(function(card) {
+card.addEventListener("mouseover", function() {
+    let randomColor = getRandomColor();
+    card.style.backgroundColor = randomColor;
+});
+});
+
+
 let serial = 0;
 
 // first-card
@@ -15,9 +23,7 @@ document.getElementById('first-card').addEventListener('click', function(){
         wideValue == "" ||
         heightValue == "" ||
         wideValue <= 0 ||
-        heightValue <= 0 ||
-        wideValue != "number" ||
-        heightValue != "number"
+        heightValue <= 0
     ) {
         return alert("please enter any valid number");
     }
@@ -39,9 +45,7 @@ document.getElementById('second-card').addEventListener('click', function(){
         wideValue == "" ||
         heightValue == "" ||
         wideValue <= 0 ||
-        heightValue <= 0 ||
-        wideValue != "number" ||
-        heightValue != "number"
+        heightValue <= 0
     ) {
         return alert("please enter any valid number");
     }
@@ -95,6 +99,16 @@ document.getElementById('sixth-card').addEventListener('click', function(){
 
 
 // common function to display data
+function getRandomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+    }
+
+
 function getData(id1, id2, id3){
     const cardName = document.getElementById(id1).innerText;
     const wideValue = document.getElementById(id2).innerText;
