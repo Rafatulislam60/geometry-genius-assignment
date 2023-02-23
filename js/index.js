@@ -23,12 +23,14 @@ document.getElementById('first-card').addEventListener('click', function(){
         wideValue == "" ||
         heightValue == "" ||
         wideValue <= 0 ||
-        heightValue <= 0
+        heightValue <= 0 ||
+        wideValue !== "number"||
+        heightValue !== "number"
     ) {
         return alert("please enter any valid number");
     }
 
-    const areaTotal = 0.5 * parseInt(wideValue) * parseInt(heightValue);
+    const areaTotal = 0.5 * parseInt(wideValue) * parseInt(heightValue) + " cm²";
     
     displayData(cardName, wideValue, heightValue, areaTotal);
 })
@@ -45,12 +47,14 @@ document.getElementById('second-card').addEventListener('click', function(){
         wideValue == "" ||
         heightValue == "" ||
         wideValue <= 0 ||
-        heightValue <= 0
+        heightValue <= 0 ||
+        wideValue !== "number"||
+        heightValue !== "number"
     ) {
         return alert("please enter any valid number");
     }
     
-    const areaTotal = parseInt(wideValue) * parseInt(heightValue);
+    const areaTotal = parseInt(wideValue) * parseInt(heightValue) + " cm²";
     
     displayData(cardName, wideValue, heightValue, areaTotal);
 })
@@ -60,7 +64,7 @@ document.getElementById('third-card').addEventListener('click', function(){
     serial +=1;
 
         const cd = getData('third-name', 'wide-side', 'height-side');
-        const areaTotal = parseInt(cd.wideValue) * parseInt(cd.heightValue);
+        const areaTotal = parseInt(cd.wideValue) * parseInt(cd.heightValue) + " cm²";
     
         displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
@@ -70,7 +74,7 @@ document.getElementById('fourth-card').addEventListener('click', function(e){
     serial +=1;
 
     const cd = getData('fourth-name', 'first-side', 'second-side');
-    const areaTotal = 0.5 * parseInt(cd.wideValue) * parseInt(cd.heightValue);
+    const areaTotal = 0.5 * parseInt(cd.wideValue) * parseInt(cd.heightValue) + " cm²";
     
     displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
@@ -80,7 +84,7 @@ document.getElementById('fifth-card').addEventListener('click', function(e){
     serial +=1;
     const cd = getData('fifth-name', 'first-value', 'second-value');
 
-    const areaTotal = 0.5 * parseInt(cd.wideValue) * parseInt(cd.heightValue);
+    const areaTotal = 0.5 * parseInt(cd.wideValue) * parseInt(cd.heightValue) + " cm²";
     
     displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
@@ -90,8 +94,8 @@ document.getElementById('sixth-card').addEventListener('click', function(){
     serial +=1;
     const cd = getData('sixth-name', 'valueOfOne', 'valueOfTwo');
 
-        const total = 3.14 * parseInt(cd.wideValue) * parseInt(cd.heightValue);
-    const areaTotal = parseInt(total).toFixed(2);
+        const total = 3.14 * parseInt(cd.wideValue) * parseInt(cd.heightValue) + " cm²";
+    const areaTotal = parseInt(total).toFixed(2) + " cm²";
     
     displayData(cd.cardName, cd.wideValue, cd.heightValue, areaTotal);
 })
